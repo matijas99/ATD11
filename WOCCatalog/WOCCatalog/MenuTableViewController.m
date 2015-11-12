@@ -31,6 +31,7 @@
 #import "OpenGLES20Controller.h"
 #import "PhotogridViewController.h"
 #import "BezierViewController.h"
+#import "MapViewController.h"
 
 #ifdef WINOBJC
 #import "XamlViewController.h"
@@ -58,6 +59,14 @@ static NSString *viewTitleKeyName = @"ViewName";
     [super viewDidLoad];
     
     self.menuItems = [NSMutableArray array];
+    
+    
+    // CollectionView
+    MapViewController *mapViewController = [[MapViewController alloc] init];
+    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                               @"Karta", viewTitleKeyName,
+                               mapViewController, controllerKeyName,
+                               nil]];
 
     // Controls
     ControlsViewController *controlsViewController = [[ControlsViewController alloc] init];

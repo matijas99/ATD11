@@ -46,6 +46,8 @@
 		7BCEEE4C1B70220300C31CF5 /* OpenGLES11Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCEEE481B70220300C31CF5 /* OpenGLES11Controller.m */; };
 		7BCEEE4D1B70220300C31CF5 /* OpenGLES20Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCEEE4A1B70220300C31CF5 /* OpenGLES20Controller.m */; };
 		7BCEEE4F1B70225500C31CF5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCEEE4E1B70225500C31CF5 /* OpenGLES.framework */; };
+		9A172FAC1BF53D2400EA6C04 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A172FAA1BF53D2400EA6C04 /* MapViewController.m */; };
+		9A172FAD1BF53D2400EA6C04 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A172FAB1BF53D2400EA6C04 /* MapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,9 @@
 		7BCEEE491B70220300C31CF5 /* OpenGLES20Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLES20Controller.h; sourceTree = "<group>"; };
 		7BCEEE4A1B70220300C31CF5 /* OpenGLES20Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLES20Controller.m; sourceTree = "<group>"; };
 		7BCEEE4E1B70225500C31CF5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		9A172FA91BF53D2400EA6C04 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		9A172FAA1BF53D2400EA6C04 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		9A172FAB1BF53D2400EA6C04 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +173,9 @@
 		4EE861571B5996BF00682BDB /* WOCCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				9A172FA91BF53D2400EA6C04 /* MapViewController.h */,
+				9A172FAA1BF53D2400EA6C04 /* MapViewController.m */,
+				9A172FAB1BF53D2400EA6C04 /* MapViewController.xib */,
 				7BCEEE451B70220300C31CF5 /* DisplayModeViewController.h */,
 				7BCEEE461B70220300C31CF5 /* DisplayModeViewController.m */,
 				7BCEEE471B70220300C31CF5 /* OpenGLES11Controller.h */,
@@ -357,6 +365,7 @@
 				4EE861F11B5997AD00682BDB /* photo6.jpg in Resources */,
 				4EE861F71B5997AD00682BDB /* whiteButton.png in Resources */,
 				4EE861EB1B5997AD00682BDB /* blueButton.png in Resources */,
+				9A172FAD1BF53D2400EA6C04 /* MapViewController.xib in Resources */,
 				4EE861F61B5997AD00682BDB /* segment_tools.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +387,7 @@
 				4EE861DD1B5997A500682BDB /* XamlViewController.m in Sources */,
 				4EE861DB1B5997A500682BDB /* ViewController.m in Sources */,
 				4EE861DC1B5997A500682BDB /* WebViewController.m in Sources */,
+				9A172FAC1BF53D2400EA6C04 /* MapViewController.m in Sources */,
 				4EE861D11B5997A500682BDB /* ButtonsViewController.m in Sources */,
 				7B42BCF51B90ECFE00D45782 /* BezierViewController.m in Sources */,
 				4EE8615B1B5996BF00682BDB /* main.m in Sources */,
