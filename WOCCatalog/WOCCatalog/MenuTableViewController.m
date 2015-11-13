@@ -31,11 +31,12 @@
 #import "OpenGLES20Controller.h"
 #import "PhotogridViewController.h"
 #import "BezierViewController.h"
-#import "MapViewController.h"
 
 #ifdef WINOBJC
 #import "XamlViewController.h"
 #import "DisplayModeViewController.h"
+#else
+#import "MapViewController.h"
 #endif
 
 static NSString *controllerKeyName = @"ViewController";
@@ -59,14 +60,6 @@ static NSString *viewTitleKeyName = @"ViewName";
     [super viewDidLoad];
     
     self.menuItems = [NSMutableArray array];
-    
-    
-    // CollectionView
-    MapViewController *mapViewController = [[MapViewController alloc] init];
-    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-                               @"Karta", viewTitleKeyName,
-                               mapViewController, controllerKeyName,
-                               nil]];
 
     // Controls
     ControlsViewController *controlsViewController = [[ControlsViewController alloc] init];
@@ -95,6 +88,13 @@ static NSString *viewTitleKeyName = @"ViewName";
     [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
                                @"Display Mode", viewTitleKeyName,
                                displayModeViewController, controllerKeyName,
+                               nil]];
+#else
+    // MapView
+    MapViewController *mapViewController = [[MapViewController alloc] init];
+    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                               @"Karta", viewTitleKeyName,
+                               mapViewController, controllerKeyName,
                                nil]];
 #endif
     
