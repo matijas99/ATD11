@@ -38,13 +38,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    
-//    MenuTableViewController* mtvc = [[MenuTableViewController alloc] init];
-//    self.viewController = (UIViewController*)[[UINavigationController alloc] initWithRootViewController:mtvc];
-//    
-//    self.window.rootViewController = self.viewController;
-//    [self.window makeKeyAndVisible];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    MenuTableViewController* mtvc = [[MenuTableViewController alloc] init];
+    self.viewController = (UIViewController*)[[UINavigationController alloc] initWithRootViewController:mtvc];
+
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
 
     return YES;
 }

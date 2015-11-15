@@ -1,22 +1,22 @@
 //
-//  MainViewController.m
+//  AutoLayoutViewController.m
 //  WOCCatalog
 //
 //  Created by Matija Smalcelj on 15/11/15.
 //  Copyright © 2015 MSFT. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "AutoLayoutViewController.h"
 
-@interface MainViewController ()
+@interface AutoLayoutViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation AutoLayoutViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,5 +1,5 @@
 //
-//  MainViewController.h
+//  AutoLayoutViewController.h
 //  WOCCatalog
 //
 //  Created by Matija Smalcelj on 15/11/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface AutoLayoutViewController : UIViewController
 
 @end

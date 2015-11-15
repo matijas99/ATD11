@@ -24,14 +24,15 @@
     
     MKCoordinateRegion region = { {0.0, 0.0 }, { 0.0, 0.0 } };
     
-    region.center.latitude = 45.771374;
-    region.center.longitude = 15.943626;
+    region.center.latitude = 45.7705;
+    region.center.longitude = 15.94;
     
-    region.span.longitudeDelta = 0.01f;
-    region.span.latitudeDelta = 0.01f;
+    region.span.longitudeDelta = 0.007f;
+    region.span.latitudeDelta = 0.007f;
     
     [self.map setRegion:region animated:YES];
     [self.map regionThatFits:region];
+    [self.map setMapType:MKMapTypeSatellite];
     
     self.map.delegate = self;
     

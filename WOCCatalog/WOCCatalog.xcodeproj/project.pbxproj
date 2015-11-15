@@ -44,8 +44,8 @@
 		7BCEEE4F1B70225500C31CF5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCEEE4E1B70225500C31CF5 /* OpenGLES.framework */; };
 		9A172FB11BF5D29300EA6C04 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A172FAF1BF5D29300EA6C04 /* MapViewController.m */; };
 		9A172FB21BF5D29300EA6C04 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A172FB01BF5D29300EA6C04 /* MapViewController.xib */; };
-		9A172FB41BF9344B00EA6C04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A172FB31BF9344B00EA6C04 /* Main.storyboard */; };
-		9A172FB71BF934C700EA6C04 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A172FB61BF934C700EA6C04 /* MainViewController.m */; };
+		9A172FBB1BF938FF00EA6C04 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A172FB91BF938FF00EA6C04 /* AutoLayoutViewController.m */; };
+		9A172FBC1BF938FF00EA6C04 /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A172FBA1BF938FF00EA6C04 /* AutoLayoutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,9 +122,9 @@
 		9A172FAE1BF5D29300EA6C04 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9A172FAF1BF5D29300EA6C04 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		9A172FB01BF5D29300EA6C04 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
-		9A172FB31BF9344B00EA6C04 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		9A172FB51BF934C700EA6C04 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		9A172FB61BF934C700EA6C04 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		9A172FB81BF938FF00EA6C04 /* AutoLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutViewController.h; sourceTree = "<group>"; };
+		9A172FB91BF938FF00EA6C04 /* AutoLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutViewController.m; sourceTree = "<group>"; };
+		9A172FBA1BF938FF00EA6C04 /* AutoLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,9 +215,9 @@
 				4ED640221B717E470092921E /* SingleImageViewController.m */,
 				4ED640241B717E530092921E /* SingleImageViewController.h */,
 				4EE861581B5996BF00682BDB /* Supporting Files */,
-				9A172FB31BF9344B00EA6C04 /* Main.storyboard */,
-				9A172FB51BF934C700EA6C04 /* MainViewController.h */,
-				9A172FB61BF934C700EA6C04 /* MainViewController.m */,
+				9A172FB81BF938FF00EA6C04 /* AutoLayoutViewController.h */,
+				9A172FB91BF938FF00EA6C04 /* AutoLayoutViewController.m */,
+				9A172FBA1BF938FF00EA6C04 /* AutoLayoutViewController.xib */,
 			);
 			path = WOCCatalog;
 			sourceTree = "<group>";
@@ -353,10 +353,10 @@
 				4EE861ED1B5997AD00682BDB /* photo2.jpg in Resources */,
 				4EE861EE1B5997AD00682BDB /* photo3.jpg in Resources */,
 				4EE861F01B5997AD00682BDB /* photo5.jpg in Resources */,
-				9A172FB41BF9344B00EA6C04 /* Main.storyboard in Resources */,
 				4EE861F11B5997AD00682BDB /* photo6.jpg in Resources */,
 				4EE861F71B5997AD00682BDB /* whiteButton.png in Resources */,
 				4EE861EB1B5997AD00682BDB /* blueButton.png in Resources */,
+				9A172FBC1BF938FF00EA6C04 /* AutoLayoutViewController.xib in Resources */,
 				9A172FB21BF5D29300EA6C04 /* MapViewController.xib in Resources */,
 				4EE861F61B5997AD00682BDB /* segment_tools.png in Resources */,
 			);
@@ -391,11 +391,11 @@
 				4ED640201B712C0B0092921E /* PhotogridViewController.m in Sources */,
 				4EE861D21B5997A500682BDB /* ControlsViewController.m in Sources */,
 				4EE861D31B5997A500682BDB /* MenuTableViewController.m in Sources */,
+				9A172FBB1BF938FF00EA6C04 /* AutoLayoutViewController.m in Sources */,
 				7BCEEE4C1B70220300C31CF5 /* OpenGLES11Controller.m in Sources */,
 				4EE861D01B5997A500682BDB /* AppDelegate.m in Sources */,
 				4EE861D51B5997A500682BDB /* SearchBarViewController.m in Sources */,
 				4EE861FA1B5997E400682BDB /* ImagesViewController.m in Sources */,
-				9A172FB71BF934C700EA6C04 /* MainViewController.m in Sources */,
 				4EE861D91B5997A500682BDB /* ToolbarsViewController.m in Sources */,
 				4EE861D71B5997A500682BDB /* TextFieldsViewController.m in Sources */,
 				4EE861D81B5997A500682BDB /* TextViewViewController.m in Sources */,

@@ -30,10 +30,13 @@
 #import "OpenGLES11Controller.h"
 #import "OpenGLES20Controller.h"
 #import "PhotogridViewController.h"
+#import "AutoLayoutViewController.h"
 
 #ifdef WINOBJC
 #import "XamlViewController.h"
 #import "DisplayModeViewController.h"
+#else
+#import "MapViewController.h"
 #endif
 
 static NSString *controllerKeyName = @"ViewController";
@@ -86,7 +89,21 @@ static NSString *viewTitleKeyName = @"ViewName";
                                @"Display Mode", viewTitleKeyName,
                                displayModeViewController, controllerKeyName,
                                nil]];
+#else
+    // Map
+    MapViewController *mapViewController = [[MapViewController alloc] init];
+    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                               @"iOS Map", viewTitleKeyName,
+                               mapViewController, controllerKeyName,
+                               nil]];
 #endif
+    
+    // Map
+    AutoLayoutViewController *autoLayoutViewController = [[AutoLayoutViewController alloc] init];
+    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                               @"Auto layout", viewTitleKeyName,
+                               autoLayoutViewController, controllerKeyName,
+                               nil]];
     
     // TextFields
     TextFieldsViewController *textFieldsViewController = [[TextFieldsViewController alloc] init];
