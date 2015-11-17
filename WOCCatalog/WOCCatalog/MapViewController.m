@@ -23,7 +23,7 @@
     
 #ifdef WINOBJC
     WUXCMMapControl* mapElement= [WUXCMMapControl create];
-    mapElement.MapServiceToken=@"NHsFIjVuEZfDMhkTe1hy~RBJH9Rih9OemUAoD0yogVA~Ag1kHArXjAg2Hck8lveAzRAlSDqy21FTKrXY1sRe5XOLKLDkL-DIsg45inihpYKu";
+    mapElement.mapServiceToken=@"NHsFIjVuEZfDMhkTe1hy~RBJH9Rih9OemUAoD0yogVA~Ag1kHArXjAg2Hck8lveAzRAlSDqy21FTKrXY1sRe5XOLKLDkL-DIsg45inihpYKu";
     UIView *mapView = [[UIView alloc] initWithFrame: self.view.frame];
     [mapView setNativeElement: mapElement];
     [self.view addSubview:mapView];

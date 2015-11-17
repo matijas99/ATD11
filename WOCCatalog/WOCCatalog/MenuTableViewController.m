@@ -35,9 +35,9 @@
 #ifdef WINOBJC
 #import "XamlViewController.h"
 #import "DisplayModeViewController.h"
-#else
-#import "MapViewController.h"
 #endif
+
+#import "MapViewController.h"
 
 static NSString *controllerKeyName = @"ViewController";
 static NSString *viewTitleKeyName = @"ViewName";
