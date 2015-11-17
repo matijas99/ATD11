@@ -5,14 +5,9 @@
 //  Created by Matija Smalcelj on 12/11/15.
 //  Copyright © 2015 MSFT. All rights reserved.
 //
-#ifdef WINOBJC
-#else
-
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController<MKMapViewDelegate>
+@interface MapViewController : UIViewController
 
 @end
-
-#endif

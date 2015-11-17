@@ -89,14 +89,14 @@ static NSString *viewTitleKeyName = @"ViewName";
                                @"Display Mode", viewTitleKeyName,
                                displayModeViewController, controllerKeyName,
                                nil]];
-#else
+#endif
+
     // Map
     MapViewController *mapViewController = [[MapViewController alloc] init];
     [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-                               @"iOS Map", viewTitleKeyName,
+                               @"Map", viewTitleKeyName,
                                mapViewController, controllerKeyName,
                                nil]];
-#endif
     
     // Map
     AutoLayoutViewController *autoLayoutViewController = [[AutoLayoutViewController alloc] init];

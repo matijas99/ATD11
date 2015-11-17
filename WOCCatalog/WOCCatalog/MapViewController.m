@@ -5,22 +5,30 @@
 //  Created by Matija Smalcelj on 12/11/15.
 //  Copyright © 2015 MSFT. All rights reserved.
 //
-#ifdef WINOBJC
-#else
 
 #import "MapViewController.h"
-
-@interface MapViewController ()
-
-@property (strong, nonatomic) IBOutlet MKMapView *map;
-
-@end
+#ifdef WINOBJC
+#import <UWP/WindowsUIXamlControls.h>
+#import <UWP/WindowsUIXamlControlsMaps.h>
+#else
+#import <MapKit/MapKit.h>
+#endif
 
 @implementation MapViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+#ifdef WINOBJC
+    WUXCMMapControl* mapElement= [WUXCMMapControl create];
+    mapElement.MapServiceToken=@"NHsFIjVuEZfDMhkTe1hy~RBJH9Rih9OemUAoD0yogVA~Ag1kHArXjAg2Hck8lveAzRAlSDqy21FTKrXY1sRe5XOLKLDkL-DIsg45inihpYKu";
+    UIView *mapView = [[UIView alloc] initWithFrame: self.view.frame];
+    [mapView setNativeElement: mapElement];
+    [self.view addSubview:mapView];
+#else
+    MKMapView *mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
     
     MKCoordinateRegion region = { {0.0, 0.0 }, { 0.0, 0.0 } };
     
@@ -30,21 +38,14 @@
     region.span.longitudeDelta = 0.007f;
     region.span.latitudeDelta = 0.007f;
     
-    [self.map setRegion:region animated:YES];
-    [self.map regionThatFits:region];
-    [self.map setMapType:MKMapTypeSatellite];
+    [mapView setRegion:region animated:YES];
+    [mapView regionThatFits:region];
+    [mapView setMapType:MKMapTypeSatellite];
     
-    self.map.delegate = self;
+    [self.view addSubview:mapView];
+#endif
     
-}
-
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
-    MKPinAnnotationView *pav = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
     
-    NSLog(@"called viewForAnnotation");
-    
-    pav.pinColor = MKPinAnnotationColorGreen;
-    return pav;
 }
 
 
@@ -53,16 +54,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
-
-#endif
