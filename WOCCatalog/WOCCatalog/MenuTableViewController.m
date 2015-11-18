@@ -31,13 +31,13 @@
 #import "OpenGLES20Controller.h"
 #import "PhotogridViewController.h"
 #import "AutoLayoutViewController.h"
+#import "MapViewController.h"
 
 #ifdef WINOBJC
 #import "XamlViewController.h"
 #import "DisplayModeViewController.h"
 #endif
 
-#import "MapViewController.h"
 
 static NSString *controllerKeyName = @"ViewController";
 static NSString *viewTitleKeyName = @"ViewName";
@@ -74,36 +74,6 @@ static NSString *viewTitleKeyName = @"ViewName";
                               @"Buttons", viewTitleKeyName,
                               buttonsViewController, controllerKeyName,
                               nil]];
-    
-#ifdef WINOBJC
-    // Controls
-    XamlViewController *xamlViewController = [[XamlViewController alloc] init];
-    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-                               @"XamlControls", viewTitleKeyName,
-                               xamlViewController, controllerKeyName,
-                               nil]];
-
-    // Display mode
-    SBDisplayModeViewController *displayModeViewController = [[SBDisplayModeViewController alloc] init];
-    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-                               @"Display Mode", viewTitleKeyName,
-                               displayModeViewController, controllerKeyName,
-                               nil]];
-#endif
-
-    // Map
-    MapViewController *mapViewController = [[MapViewController alloc] init];
-    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-                               @"Map", viewTitleKeyName,
-                               mapViewController, controllerKeyName,
-                               nil]];
-    
-    // Map
-    AutoLayoutViewController *autoLayoutViewController = [[AutoLayoutViewController alloc] init];
-    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-                               @"Auto layout", viewTitleKeyName,
-                               autoLayoutViewController, controllerKeyName,
-                               nil]];
     
     // TextFields
     TextFieldsViewController *textFieldsViewController = [[TextFieldsViewController alloc] init];
@@ -181,6 +151,37 @@ static NSString *viewTitleKeyName = @"ViewName";
     [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
                                @"CollectionView", viewTitleKeyName,
                                photoGridViewController, controllerKeyName,
+                               nil]];
+    
+#ifdef WINOBJC
+    // Controls
+    XamlViewController *xamlViewController = [[XamlViewController alloc] init];
+    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                               @"XamlControls", viewTitleKeyName,
+                               xamlViewController, controllerKeyName,
+                               nil]];
+    
+    // Display mode
+    SBDisplayModeViewController *displayModeViewController = [[SBDisplayModeViewController alloc] init];
+    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                               @"Display Mode", viewTitleKeyName,
+                               displayModeViewController, controllerKeyName,
+                               nil]];
+#endif
+    
+    
+    // Auto layout
+    AutoLayoutViewController *autoLayoutViewController = [[AutoLayoutViewController alloc] init];
+    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                               @"Auto layout", viewTitleKeyName,
+                               autoLayoutViewController, controllerKeyName,
+                               nil]];
+    
+    // Map
+    MapViewController *mapViewController = [[MapViewController alloc] init];
+    [self.menuItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                               @"Map", viewTitleKeyName,
+                               mapViewController, controllerKeyName,
                                nil]];
  }
 
