@@ -16,10 +16,8 @@
 
 @implementation MapViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
+- (IBAction)showMapAction:(id)sender {
+
     
 #ifdef WINOBJC
     WUXCMMapControl* mapElement= [WUXCMMapControl create];
@@ -44,8 +42,13 @@
     
     [self.view addSubview:mapView];
 #endif
-    
-    
+
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
 }
 
 
